@@ -2,7 +2,8 @@ import 'package:flutter_in_store_app_version_checker/flutter_in_store_app_versio
 import 'package:utils/utils/log.dart';
 
 class CheckVersion {
-  static void checkVersion(InStoreAppVersionChecker checker) async {
+
+  static void checkVersion(checker) async {
     checker.checkUpdate().then((value) {
       Log.d(value.appURL ?? ""); // return the app url
       Log.d(value.canUpdate.toString()); // return true if update is available
